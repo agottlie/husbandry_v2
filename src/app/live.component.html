@@ -1,0 +1,21 @@
+<div class="showsy all mainContentHeadingContainer pressHeading twelve columns">
+  <h5 class="mainHeading">Upcoming Shows</h5>
+</div>
+<div *ngFor="let show of futureShows" class="showsPageItem showsy all twelve columns">
+  <p class="inline">{{show.tourdate}} -</p>
+  <p class="inline">{{show.city}} ·</p>
+  <p class="inline highlight"><a href="{{show.link}}">{{show.venue}}</a></p>
+  <p class="inline">· W/ {{show.bands}} ·</p>
+</div>
+
+<!-- Upcoming Shows ^       ↓ Past Shows
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div class="showsy all mainContentHeadingContainer pressHeading twelve columns">
+  <h5 class="mainHeading">Past Shows</h5>
+</div>
+<div *ngFor="let show of pastShows" class="showsPageItem showsy all twelve columns">
+  <p class="inline">{{show.tourdate}} -</p>
+  <p class="inline">{{show.city}} ·</p>
+  <p class="inline">{{show.venue}}</p>
+  <p class="inline">· W/ {{show.bands}} ·</p>
+</div>

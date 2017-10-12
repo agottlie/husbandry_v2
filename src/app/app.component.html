@@ -1,0 +1,56 @@
+<!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<div id="mainScrollContainer" class="container">
+  <div class="row mainPageRow clearfix">
+    <div id="masterHeading" class="masterHeadingContainer twelve columns">
+      <div class="headingContainer twelve columns">
+        <div class="eight columns">
+          <img src="assets/Husbandry_LOGO-01.png" style="cursor:pointer;" id="mainLogo" onmouseover="this.src='assets/Husbandry_LOGO-HOVER-01.png'" onmouseout="this.src='assets/Husbandry_LOGO-01.png'">
+        </div>
+        <div class="navCockContainer one cloumn">
+          <img id="navCock" src="assets/knife.png" />
+        </div>
+      </div>
+      <div class="twelve columns secondHeadingContainer">
+        <div class="twelve columns navItemsContainer">
+          <ul class="navItems">
+            <li><a routerLink="/news" routerLinkActive="active">News</a></li>
+            <li><a routerLink="/music" routerLinkActive="active">Music</a></li>
+            <li><a routerLink="/about" routerLinkActive="active">About</a></li>
+            <li><a routerLink="/live" routerLinkActive="active">Live</a></li>
+            <li><a routerLink="/contact" routerLinkActive="contact">Contact</a></li>
+            <li><a routerLink="/store" routerLinkActive="active">Store</a></li>
+            <li><a target="_blank" href="https://play.spotify.com/artist/5VyBolme1vq3dNDoF9MVIH"><img class="iconsNavClass" src="assets/icon_spotify.jpg"></a></li>
+            <li><a target="_blank" href="http://husbandryny.bandcamp.com/"><img class="iconsNavClass" src="assets/icon_bc.jpg"></a></li>
+            <li><a target="_blank" href="https://www.youtube.com/channel/UCRJemHTn6dNiuOOwpKRIieQ"><img class="iconsNavClass" src="assets/icon_youtube.jpg"></a></li>
+            <li><a target="_blank" href="https://twitter.com/husbandrynyc"><img class="iconsNavClass" src="assets/icon_twit.jpg"></a></li>
+            <li><a target="_blank" href="https://instagram.com/husbandrynyc/"><img class="iconsNavClass" src="assets/icon_instagram.jpg"></a></li>
+            <li><a target="_blank" href="https://www.facebook.com/husbandrynyc?fref=nf"><img class="iconsNavClass" src="assets/icon_fb.jpg"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <!-- Main Nav ^       ↓ Show Widget
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div id="secondaryHeading" class="showsWidget four columns floatR">
+      <div class="showContentHeadingContainer">
+        <h5 class="mainHeading">Upcoming Shows</h5>
+      </div>
+      <div *ngFor="let show of sixShows" class="show">
+        <ul>
+          <li class="showAttr">
+            {{show.tourdate}}
+          </li>
+          <li class="showAttr">
+            <span class="highlight"><a href="{{show.link}}">{{show.venue}}</a></span>
+          </li>
+          <li class="showAttr">
+            {{show.city}}
+          </li>
+        </ul>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+  <div class="footerCopywright">Husbandry © 2017</div>
+</div>
