@@ -12,6 +12,7 @@ import { LiveComponent } from './live.component';
 import { ContactComponent } from './contact.component';
 import { StoreComponent } from './store.component';
 import { ShowService } from './show.service';
+import { EpkComponent } from './epk.component';
 
 @NgModule({
   imports: [
@@ -26,7 +27,8 @@ import { ShowService } from './show.service';
     AboutComponent,
     LiveComponent,
     ContactComponent,
-    StoreComponent
+    StoreComponent,
+    EpkComponent
   ],
   providers: [ShowService],
   bootstrap: [AppComponent]

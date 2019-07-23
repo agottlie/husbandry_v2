@@ -1575,7 +1575,7 @@ br {
   border-bottom: 1px solid #0000e1;
 }
 
-.footerCopywright {
+.footerCopyright {
   color: #0000e1;
   font-family: husbandryFira;
   font-size: 12px;
@@ -1711,4 +1711,22 @@ br {
 .newSize {
   height: 124px;
   width: auto;
+}
+
+.epkrow:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.epkcolumn {
+  float: left;
+  width: 50%;
+  color: white;
+  font-family: helvetica;
+  font-size: 14px;
+}
+
+.epkcolumn>div {
+  margin-top: 20px;
 }
